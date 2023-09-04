@@ -44,7 +44,7 @@ jobs:
         run: sudo chown runner:runner -R .*
 
       - name: checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: start mongod server for tests
         run: |
@@ -99,7 +99,7 @@ jobs:
     steps:
       - name: sync directory owner
         run: sudo chown runner:runner -R .*
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: collect pytest warnings files
         uses: actions/download-artifact@v2
         with:
@@ -130,7 +130,7 @@ jobs:
         python-version: [ 3.8 ]
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
